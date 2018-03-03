@@ -6,6 +6,8 @@ The goals/steps of this project are following:
 * Autonomous control the drone to perform the same task
 * Use the logs to plot the trajectory of the drone and analyze the performance of the task.
 
+![alt text][image3]
+
 ## Setup
 * Download the [simulator](https://github.com/udacity/FCND-Simulator/releases).
 * Setup [Python environment](https://github.com/udacity/FCND-Term1-Starter-Kit)
@@ -18,6 +20,7 @@ The goals/steps of this project are following:
 
 [image1]: ./images/plots-auto.png "Autonomous Trajectory"
 [image2]: ./images/plots-manual.png "Manual Trajectory"
+[image3]: ./images/drone.gif "Drone Flying"
 
 ## The Approach
 The task was to command the drone to fly a 10 meter box at a 3 meter altitude. 
