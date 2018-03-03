@@ -20,6 +20,8 @@ class States(Enum):
 
 class BackyardFlyer(Drone):
 
+    FlGHT_ALTITUDE = 3.0
+
     def __init__(self, connection):
         super().__init__(connection)
 
@@ -69,10 +71,10 @@ class BackyardFlyer(Drone):
 
     def calculate_box(self):
         square = [
-        	(10, 0 , 3, 0),
-        	(10, 10, 3, 0),
-        	(0, 10, 3, 0),
-        	(0, 0, 3, 0)
+        	(10, 0 , self.FlGHT_ALTITUDE, 0),
+        	(10, 10, self.FlGHT_ALTITUDE, 0),
+        	(0, 10, self.FlGHT_ALTITUDE, 0),
+        	(0, 0, self.FlGHT_ALTITUDE, 0)
         ]
         return square
 
@@ -89,7 +91,7 @@ class BackyardFlyer(Drone):
 
     def takeoff_transition(self):
         print("takeoff transition")
-        target_altitude = 3
+        target_altitude = self.FlGHT_ALTITUDE
         self.target_position[2] = target_altitude
         self.takeoff(target_altitude)
         self.flight_state = States.TAKEOFF
