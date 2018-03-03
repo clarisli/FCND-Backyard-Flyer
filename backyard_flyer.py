@@ -58,11 +58,6 @@ class BackyardFlyer(Drone):
         		self.disarming_transition()
 
     def state_callback(self):
-        """
-        TODO: Implement this method
-
-        This triggers when `MsgID.STATE` is received and self.armed and self.guided contain new data
-        """
         if not self.in_mission:
         	return
         if self.flight_state == States.MANUAL:
